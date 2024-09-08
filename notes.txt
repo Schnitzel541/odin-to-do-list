@@ -1,0 +1,31 @@
+todo-object {
+    project: project it belongs to
+    checked: bool
+    title: string
+    dueDate: date?
+}
+
+When is an object (to-do) created?
+ |_ After user input has been taken from the modal
+
+When is an object (to-do) deleted?
+ |_ After user clicks on trash can
+   |_ Prompt shows up "Are you sure?" "Yes/No"
+      |_ Delete on "Yes"
+ |_ After user deletes a project, all to-dos are deleted with it
+
+ * Every single one of these items will utilise the localStorage API
+
+When is an object (to-do) strikethrough?
+ |_ Once the user checks the checkbox on the side
+   |_ Title will change to a strikethrough font style
+
+// Result:
+
+- The user can create multiple to-dos. Upon clicking the + button, a modal will pop-up asking the user to input the following:
+   |_ input: Title, Due date, Project
+
+- The user can create a project, upon clicking the + button next to "Projects" a text box appears below the projects
+   |_ input: Title
+
+- The user can sort by all, week, month or completed

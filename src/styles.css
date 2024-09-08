@@ -59,14 +59,8 @@ header {
     font-weight: bold;
 }
 
-.project-create {
-    display: flex;
-    gap: 3vw;
-}
-
-.project-create::after {
-    content: "+";
-}
+.project-create { display: flex; gap: 3vw; }
+.project-create::after { content: "+"; }
 
 /* Content section */
 
@@ -106,7 +100,5 @@ header {
     margin-right: 18px;
 }
 
-.tools > svg {
-    width: 25px;
-}
+.tools > svg { width: 25px; }
 
