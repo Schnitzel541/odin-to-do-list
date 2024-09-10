@@ -39,8 +39,7 @@ export const createTodoObject = () => {
             console.log(todoObjectsArray);
     
             todoObjectsArray.forEach((todoObject, index) => {
-                localStorage.setItem(index.toString(), `{ title: ${todoObject.title}, 
-                                                          dueDate: ${todoObject.dueDate} }`);
+                localStorage.setItem(index.toString(), `{ title: "${todoObject.title}", dueDate: "${todoObject.dueDate}" }`);
            });
         }
     });
