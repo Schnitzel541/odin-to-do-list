@@ -27,18 +27,21 @@ export const createTodoObject = () => {
 
     addToDoButton.addEventListener('click', (e) => {
         e.preventDefault();
-        const newTodoObject = todoFactory(titleInput.value, dueDateInput.value);
-        console.log(newTodoObject);
-        todoObjectsArray.push(newTodoObject);
 
-        titleInput.value = "";
-        dueDateInput.value = "";
-        
-        console.log(todoObjectsArray);
-
-        todoObjectsArray.forEach((todoObject, index) => {
-            localStorage.setItem(index.toString(), `{ title: ${todoObject.title}, 
-                                                      dueDate: ${todoObject.dueDate} }`)
-        })
+        if (titleInput.value !== "" && dueDateInput.value !== "") {
+            const newTodoObject = todoFactory(titleInput.value, dueDateInput.value);
+            console.log(newTodoObject);
+            todoObjectsArray.push(newTodoObject);
+    
+            titleInput.value = "";
+            dueDateInput.value = "";
+            
+            console.log(todoObjectsArray);
+    
+            todoObjectsArray.forEach((todoObject, index) => {
+                localStorage.setItem(index.toString(), `{ title: ${todoObject.title}, 
+                                                          dueDate: ${todoObject.dueDate} }`);
+           });
+        }
     });
 };
