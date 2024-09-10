@@ -3,7 +3,9 @@ const domLogic = (() => {
     const createProjectLogic = () => {
         const textField = document.createElement("input");
         textField.type = "text";
-        unorderedProjectList.append(textField);
+        ! unorderedProjectList.contains(textField) 
+        ? unorderedProjectList.appendChild(textField)
+        : console.error("Can only enter one project at a time");
     }
     return { createProjectLogic }
 })();
