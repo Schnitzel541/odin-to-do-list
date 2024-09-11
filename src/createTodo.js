@@ -43,4 +43,5 @@ export const createTodoObject = () => {
            });
         }
     });
+    return { newTodoObject };
 };
