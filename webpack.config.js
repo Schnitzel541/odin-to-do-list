@@ -11,7 +11,10 @@ module.exports = {
   },
   devtool: "eval-source-map",
   devServer: {
+    hot: true,
+    liveReload: true,
     watchFiles: ["./src/template.html"],
+    port: "9010"
   },
   plugins: [
     new HtmlWebpackPlugin({
