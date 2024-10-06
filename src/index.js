@@ -1,5 +1,5 @@
 import './styles.css';
-import { modalLogicTodo, modalLogicProject, addTodoToList, renderTodos } from './domLogic.js';
+import { modalLogicTodo, modalLogicProject, addTodoToList, renderTodos, clearDOM } from './domLogic.js';
 
 /**dom logic */
 /**/modalLogicTodo();
@@ -7,4 +7,5 @@ import { modalLogicTodo, modalLogicProject, addTodoToList, renderTodos } from '.
 
 /**get todo and project data*/
 /**/addTodoToList();
-/**/renderTodos();
+clearDOM(".content");
+renderTodos();
